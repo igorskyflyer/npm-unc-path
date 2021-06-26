@@ -1,6 +1,6 @@
 {
 	"name": "@igor.dvlpr/unc-path",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Provides ways of parsing UNC paths and checking whether they are valid.",
 	"main": "index.js",
 	"scripts": {
