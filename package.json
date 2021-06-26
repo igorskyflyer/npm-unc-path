@@ -1,0 +1,33 @@
+{
+	"name": "@igor.dvlpr/unc-path",
+	"version": "1.0.0",
+	"description": "Provides ways of parsing UNC paths and checking whether they are valid.",
+	"main": "index.js",
+	"scripts": {
+		"test": "mocha --slow 0",
+		"party": "npm test && npm publish --access public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/igorskyflyer/npm-unc-path.git"
+	},
+	"keywords": [
+		"unc",
+		"path",
+		"filesystem",
+		"utility",
+		"igordvlpr"
+	],
+	"author": "Igor Dimitrijević",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/igorskyflyer/npm-unc-path/issues"
+	},
+	"homepage": "https://github.com/igorskyflyer/npm-unc-path#readme",
+	"devDependencies": {
+		"@types/mocha": "^8.2.2",
+		"@types/node": "^15.12.4",
+		"chai": "^4.3.4",
+		"mocha": "^9.0.1"
+	}
+}
