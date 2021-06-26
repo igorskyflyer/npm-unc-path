@@ -1,2 +1,3 @@
-# is-unc-path
-🥽 Provides ways of checking whether a given path is a UNC path. 🎱
+# UNC Path
+
+🥽 Provides ways of parsing UNC paths and checking whether they are valid. 🎱
