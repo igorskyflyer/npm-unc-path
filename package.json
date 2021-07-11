@@ -1,8 +1,13 @@
 {
 	"name": "@igor.dvlpr/unc-path",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Provides ways of parsing UNC paths and checking whether they are valid.",
 	"main": "index.js",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"index.js",
+		"dist/"
+	],
 	"scripts": {
 		"test": "mocha --slow 0",
 		"party": "npm test && npm publish --access public"
@@ -28,6 +33,7 @@
 		"@types/mocha": "^8.2.2",
 		"@types/node": "^15.12.4",
 		"chai": "^4.3.4",
-		"mocha": "^9.0.1"
+		"mocha": "^9.0.1",
+		"typescript": "^4.3.5"
 	}
 }
