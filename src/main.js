@@ -4,19 +4,12 @@
 const pattern = /^[\/|\\]{2}[^\/\\]+[^]*/g
 const patternCapture = /^[\/\\]{2}(?<server>[^\/\\]+)(?<resource>[^]*)/
 
-function createEmptyCapture() {
-  return {
-    server: '',
-    resource: '',
-  }
-}
-
 /**
  * Checks whether the given path is a UNC one.
  * @param	{string} path
  * @returns {boolean}
  */
-function isValid(path) {
+export function isValid(path) {
   if (!path) {
     return false
   }
@@ -32,9 +25,12 @@ function isValid(path) {
  * @param {string} path
  * @returns {{ server: string, resource: string }} returns UNC path's components
  */
-function parse(path) {
+export function parse(path) {
   if (!path) {
-    return createEmptyCapture()
+    return {
+      server: '',
+      resource: '',
+    }
   }
 
   patternCapture.lastIndex = -1
@@ -45,13 +41,16 @@ function parse(path) {
     const result = {}
 
     for (let capture in match.groups) {
+      // @ts-ignore
       result[capture] = match.groups[capture]
     }
 
+    // @ts-ignore
     return result
   } else {
-    return createEmptyCapture()
+    return {
+      server: '',
+      resource: '',
+    }
   }
 }
-
-module.exports = { isValid, parse }
