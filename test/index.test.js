@@ -1,5 +1,5 @@
-import { assert as chai } from 'chai'
-import { isValid, parse } from '../src/main.js'
+const chai = require('chai').assert
+const { isValid, parse } = require('../src/index.js')
 
 describe('unc-path tests', () => {
   describe('isValid', () => {
