@@ -1,5 +1,3 @@
-'use strict'
-
 // support both Windows and UNIX UNC paths
 const pattern = /^[\/|\\]{2}[^\/\\]+[^]*/g
 const patternCapture = /^[\/\\]{2}(?<server>[^\/\\]+)(?<resource>[^]*)/
@@ -9,7 +7,7 @@ const patternCapture = /^[\/\\]{2}(?<server>[^\/\\]+)(?<resource>[^]*)/
  * @param	{string} path
  * @returns {boolean}
  */
-export function isValid(path) {
+function isValid(path) {
   if (!path) {
     return false
   }
@@ -25,7 +23,7 @@ export function isValid(path) {
  * @param {string} path
  * @returns {{ server: string, resource: string }} returns UNC path's components
  */
-export function parse(path) {
+function parse(path) {
   if (!path) {
     return {
       server: '',
@@ -54,3 +52,5 @@ export function parse(path) {
     }
   }
 }
+
+module.exports = { isValid, parse }
