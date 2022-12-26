@@ -1,6 +1,6 @@
 {
 	"name": "@igor.dvlpr/unc-path",
-	"version": "2.1.1",
+	"version": "2.1.2",
 	"description": "🥽 Provides ways of parsing UNC paths and checking whether they are valid. 🎱",
 	"engines": {
 		"node": ">=12.17"
