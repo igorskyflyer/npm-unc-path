@@ -34,7 +34,8 @@
 		"utility",
 		"igordvlpr"
 	],
-	"author": "Igor Dimitrijević",
+	"author": "Igor Dimitrijević <admin@igorskyflyer.me> (https://github.com/igorskyflyer)",
+	"funding": "https://ko-fi.com/igorskyflyer",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/igorskyflyer/npm-unc-path/issues"
