@@ -1,52 +1,46 @@
 {
 	"name": "@igor.dvlpr/unc-path",
-	"version": "2.1.2",
+	"version": "3.0.0",
 	"description": "🥽 Provides ways of parsing UNC paths and checking whether they are valid. 🎱",
-	"engines": {
-		"node": ">=12.17"
-	},
 	"sideEffects": false,
-	"main": "./src/index",
-	"exports": {
-		".": {
-			"require": "./src/index.js",
-			"import": "./src/index.mjs"
-		}
+	"engines": {
+		"node": ">=20.0"
 	},
-	"module": "./src/index.mjs",
-	"types": "./dist/index",
+	"types": "./dist/index.d.mts",
+	"main": "./dist/index.mjs",
+	"module": "./dist/index.mjs",
 	"files": [
-		"dist",
-		"src"
+		"dist"
 	],
 	"scripts": {
-		"test": "mocha --slow 0",
-		"pub": "npm test && tsc && npm publish --access public"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/igorskyflyer/npm-unc-path.git"
+		"build": "tsc",
+		"test": "vitest --run",
+		"debug": "vitest",
+		"pub": "npm test && npm run build && npm publish --access public"
 	},
 	"keywords": [
 		"unc",
 		"path",
 		"filesystem",
 		"utility",
-		"igordvlpr"
+		"igorskyflyer",
+		"igor.dvlpr"
 	],
-	"author": "Igor Dimitrijević <admin@igorskyflyer.me> (https://github.com/igorskyflyer)",
-	"funding": "https://ko-fi.com/igorskyflyer",
 	"license": "MIT",
+	"author": "Igor Dimitrijević <igor.dvlpr@gmail.com> (https://github.com/igorskyflyer)",
+	"funding": "https://ko-fi.com/igorskyflyer",
+	"homepage": "https://github.com/igorskyflyer/npm-unc-path",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/igorskyflyer/npm-unc-path.git"
+	},
 	"bugs": {
 		"url": "https://github.com/igorskyflyer/npm-unc-path/issues"
 	},
-	"homepage": "https://github.com/igorskyflyer/npm-unc-path#readme",
 	"devDependencies": {
-		"@types/chai": "^4.3.4",
-		"@types/mocha": "^10.0.0",
-		"@types/node": "^12.17.0",
-		"chai": "^4.3.7",
-		"mocha": "^10.1.0",
-		"typescript": "^4.9.3"
+		"@biomejs/biome": "^1.8.3",
+		"@types/node": "^20.14.9",
+		"typescript": "^5.5.3",
+		"vitest": "^1.6.0"
 	}
 }
