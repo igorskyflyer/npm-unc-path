@@ -1,5 +1,7 @@
 # UNC Path
 
+<br>
+
 🥽 Provides ways of parsing UNC paths and checking whether they are valid. 🎱
 
 <br>
@@ -12,43 +14,37 @@
 <br>
 
 <div align="center">
-<h3>💖 Support further development</h3>
-<a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="164"></a>
+	<blockquote>
+		<h4>💖 Support further development</h4>
+		<span>I work hard for every project, including this one and your support means a lot to me!
+		<br>
+		Consider buying me a coffee. ☕
+		<br>
+		<strong>Thank you for supporting my efforts! 🙏😊</strong></span>
+		<br>
+		<br>
+		<a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="150"></a>
+		<br>
+		<br>
+		<a href="https://github.com/igorskyflyer"><em>@igorskyflyer</em></a>
+		<br>
+		<br>
+	</blockquote>
 </div>
 
 <br>
-<br>
 
-✨ Since version `2.0.0` `unc-path` is a hybrid module that supports both CommonJS (legacy) and ES modules, thanks to [Modern Module](https://github.com/igorskyflyer/npm-modern-module).
+## 🕵🏼 Usage
 
-<br>
-
-### Usage
-
-<br>
-
-Install it first by doing
+Install it by executing:
 
 ```shell
-npm i @igor.dvlpr/unc-path
-```
-
-and call `require` in your code, i.e.:
-
-```js
-const unc = require('@igor.dvlpr/unc-path')
-// or destructure the object and import only needed function(s)
-// e.g.
-const { isValid } = require('@igor.dvlpr/unc-path')
-
-// do something cool with it
+npm i "@igor.dvlpr/unc-path"
 ```
 
 <br>
 
-#### API
-
-<br>
+## 🤹🏼 API
 
 `isValid()` `=>` returns whether the given path is a UNC one.
 
@@ -56,7 +52,7 @@ const { isValid } = require('@igor.dvlpr/unc-path')
 
 Signature
 
-```js
+```ts
 isValid(path): boolean
 ```
 
@@ -64,7 +60,7 @@ isValid(path): boolean
 
 Parameters
 
-```js
+```ts
 path: string // a string that represents the path to process
 ```
 
@@ -72,8 +68,8 @@ path: string // a string that represents the path to process
 
 #### Example
 
-```js
-const { isValid } = require('@igor.dvlpr/unc-path')
+```ts
+import { isValid } from '@igor.dvlpr/unc-path'
 
 console.log(isValid('//ComputerName/SharedFolder/')) // returns true
 console.log(isValid('//ComputerName/SharedFolder/file.mp4')) // returns true
@@ -85,7 +81,7 @@ console.log(isValid('/ComputerName/SharedFolder/')) // returns false
 
 `parse()` `=>` parses the provided UNC path and returns UNC path's components as
 
-```js
+```ts
 {
 	'server': string,
 	'resource': string
@@ -96,7 +92,7 @@ console.log(isValid('/ComputerName/SharedFolder/')) // returns false
 
 Signature
 
-```js
+```ts
 parse(path): Object
 ```
 
@@ -104,7 +100,7 @@ parse(path): Object
 
 Parameters
 
-```js
+```ts
 path: string // a string that represents the path to process
 ```
 
@@ -112,8 +108,8 @@ path: string // a string that represents the path to process
 
 #### Example
 
-```js
-const { parse } = require('@igor.dvlpr/unc-path')
+```ts
+import { parse } from '@igor.dvlpr/unc-path'
 
 console.log(parse('//Server/Dev/file.js'))
 /*
@@ -132,4 +128,39 @@ returns {
 */
 ```
 
+---
+
+## 🪪 License
+
+Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/npm-unc-path/blob/main/LICENSE).
+
+---
+
+## 🧬 Related
+
+[@igor.dvlpr/encode-entities](https://www.npmjs.com/package/@igor.dvlpr/encode-entities)
+
+> _🏃‍♂️ Fast and simple Map and RegExp based HTML entities encoder. 🍁_
+
+[@igor.dvlpr/regkeys](https://www.npmjs.com/package/@igor.dvlpr/regkeys)
+
+> _📚 An NPM package for fetching Windows registry keys. 🗝_
+
+[@igor.dvlpr/upath](https://www.npmjs.com/package/@igor.dvlpr/upath)
+
+> _🎍 Provides a universal way of formatting file-paths in Unix-like and Windows operating systems as an alternative to the built-in path.normalize(). 🧬_
+
+[@igor.dvlpr/is-rootdir](https://www.npmjs.com/package/@igor.dvlpr/is-rootdir)
+
+> _🔼 Provides a way to check if the given path is the root drive/directory. ⛔_
+
+[@igor.dvlpr/valid-path](https://www.npmjs.com/package/@igor.dvlpr/valid-path)
+
+> _🧰 Provides ways of testing whether a given value can be a valid file/directory name. 🏜_
+
 <br>
+<br>
+
+>
+> Provided by **Igor Dimitrijević** ([*@igorskyflyer*](https://github.com/igorskyflyer/)).
+>
