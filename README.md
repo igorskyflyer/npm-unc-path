@@ -30,6 +30,7 @@
 		<a href="https://github.com/igorskyflyer"><em>@igorskyflyer</em></a>
 		<br>
 		<br>
+		<br>
 	</blockquote>
 </div>
 
