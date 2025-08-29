@@ -1,46 +1,65 @@
 {
-	"name": "@igor.dvlpr/unc-path",
-	"version": "3.0.0",
-	"description": "🥽 Provides ways of parsing UNC paths and checking whether they are valid. 🎱",
-	"sideEffects": false,
-	"engines": {
-		"node": ">=20.0"
-	},
-	"types": "./dist/index.d.mts",
-	"main": "./dist/index.mjs",
-	"module": "./dist/index.mjs",
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"build": "tsc",
-		"test": "vitest --run",
-		"debug": "vitest",
-		"pub": "npm test && npm run build && npm publish --access public"
-	},
-	"keywords": [
-		"unc",
-		"path",
-		"filesystem",
-		"utility",
-		"igorskyflyer",
-		"igor.dvlpr"
-	],
-	"license": "MIT",
-	"author": "Igor Dimitrijević <igor.dvlpr@gmail.com> (https://github.com/igorskyflyer)",
-	"funding": "https://ko-fi.com/igorskyflyer",
-	"homepage": "https://github.com/igorskyflyer/npm-unc-path",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/igorskyflyer/npm-unc-path.git"
-	},
-	"bugs": {
-		"url": "https://github.com/igorskyflyer/npm-unc-path/issues"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.8.3",
-		"@types/node": "^20.14.9",
-		"typescript": "^5.5.3",
-		"vitest": "^1.6.0"
-	}
+    "name": "@igorskyflyer/unc-path",
+    "version": "3.1.0",
+    "description": "🥽 Provides ways of parsing UNC paths and checking whether they are valid. 🎱",
+    "sideEffects": false,
+    "engines": {
+        "node": ">=22.0"
+    },
+    "type": "module",
+    "types": "./dist/index.d.ts",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "test": "vitest --run",
+        "pub": "pnpm test && git push origin main --tags"
+    },
+    "keywords": [
+        "unc",
+        "unc-path",
+        "windows-path",
+        "unix-path",
+        "network-path",
+        "path-parser",
+        "path-validation",
+        "regex",
+        "regexp",
+        "server-share",
+        "file-share",
+        "network-share",
+        "path-utils",
+        "typescript",
+        "utility",
+        "cross-platform",
+        "parse",
+        "validate",
+        "igor dimitrijević",
+        "igorskyflyer"
+    ],
+    "license": "MIT",
+    "author": "Igor Dimitrijević <support@igorskyflyer.me> (https://github.com/igorskyflyer)",
+    "funding": "https://ko-fi.com/igorskyflyer",
+    "homepage": "https://github.com/igorskyflyer/npm-unc-path",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/igorskyflyer/npm-unc-path.git"
+    },
+    "bugs": {
+        "url": "https://github.com/igorskyflyer/npm-unc-path/issues"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^2.2.2",
+        "@igorskyflyer/biome-config": "^2.1.0",
+        "@types/node": "^22.18.0",
+        "typescript": "^5.9.2",
+        "vitest": "^3.2.4"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "packageManager": "pnpm@10.15.0"
 }
