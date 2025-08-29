@@ -1,27 +1,27 @@
 // Author: Igor Dimitrijević (@igorskyflyer)
 
 // support both Windows and UNIX UNC paths
-const pattern: RegExp = /^[\/\\]{2}[^\/\\]+[^]*/g
-const patternCapture: RegExp = /^[\/\\]{2}(?<server>[^\/\\]+)(?<resource>[^]*)/
+const pattern: RegExp = /^[/\\]{2}[^/\\]+[\s\S]*/g
+const patternCapture: RegExp = /^[/\\]{2}(?<server>[^/\\]+)(?<resource>[\s\S]*)/
 
 export type UncPath = {
-	[key: string]: string
-	server: string
-	resource: string
+  [key: string]: string
+  server: string
+  resource: string
 }
 
 /**
  * Checks whether the given path is a UNC one.
  */
 export function isValid(path: string): boolean {
-	if (!path) {
-		return false
-	}
+  if (!path) {
+    return false
+  }
 
-	// reset the lastIndex since we reuse the same pattern
-	pattern.lastIndex = -1
+  // reset the lastIndex since we reuse the same pattern
+  pattern.lastIndex = -1
 
-	return pattern.test(path)
+  return pattern.test(path)
 }
 
 /**
@@ -29,23 +29,23 @@ export function isValid(path: string): boolean {
  * @returns returns a UNC path's components
  */
 export function parse(path: string): UncPath {
-	const result: UncPath = { server: '', resource: '' }
+  const result: UncPath = { server: '', resource: '' }
 
-	if (!path) {
-		return result
-	}
+  if (!path) {
+    return result
+  }
 
-	patternCapture.lastIndex = -1
+  patternCapture.lastIndex = -1
 
-	const match: RegExpMatchArray | null = path.match(patternCapture)
+  const match: RegExpMatchArray | null = path.match(patternCapture)
 
-	if (match?.groups) {
-		for (const capture in match.groups) {
-			result[capture] = match.groups[capture]
-		}
+  if (match?.groups) {
+    for (const capture in match.groups) {
+      result[capture] = match.groups[capture]
+    }
 
-		return result
-	}
+    return result
+  }
 
-	return result
+  return result
 }
