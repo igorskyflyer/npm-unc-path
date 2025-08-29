@@ -19,7 +19,7 @@ export function isValid(path: string): boolean {
   }
 
   // reset the lastIndex since we reuse the same pattern
-  pattern.lastIndex = -1
+  pattern.lastIndex = 0
 
   return pattern.test(path)
 }
@@ -35,7 +35,7 @@ export function parse(path: string): UncPath {
     return result
   }
 
-  patternCapture.lastIndex = -1
+  patternCapture.lastIndex = 0
 
   const match: RegExpMatchArray | null = path.match(patternCapture)
 
